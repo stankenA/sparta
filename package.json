@@ -1,0 +1,19 @@
+{
+  "name": "sparta",
+  "version": "1.0.0",
+  "description": "sparta project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stankenA/sparta.git"
+  },
+  "author": "Stankevich Artem",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/stankenA/sparta/issues"
+  },
+  "homepage": "https://github.com/stankenA/sparta#readme"
+}

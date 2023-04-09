@@ -1,0 +1,11 @@
+@import '../vendor/normalize.css';
+@import '../vendor/fonts/fonts.css';
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+@import '../blocks/variables/variables';
+@import '../blocks/mixins/mixins';
+
+@import '../blocks/page';
+@import '../blocks/common/button';
+@import '../blocks/common/link';
+
+@import '../blocks/header';
