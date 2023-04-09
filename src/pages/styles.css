@@ -21,7 +21,6 @@
   cursor: pointer;
   transition: all 0.4s ease;
 }
-
 .button:hover {
   background-color: #fff;
   color: #921012;
@@ -32,14 +31,20 @@
   color: unset;
 }
 
-.header {
+.list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.header__top {
   width: 100%;
   border-bottom: 1px solid rgba(30, 30, 30, 0.1725490196);
   height: 78px;
   display: flex;
   align-items: center;
 }
-.header__content {
+.header__top-content {
   width: 1220px;
   margin: 0 auto;
   display: flex;
@@ -107,4 +112,32 @@
   line-height: 17px;
   width: 163px;
   height: 38px;
+}
+.header__bottom {
+  height: 76px;
+  display: flex;
+  justify-content: center;
+}
+.header__menu-list {
+  display: flex;
+  justify-content: space-between;
+  gap: 60px;
+}
+.header__menu-link {
+  display: block;
+  padding: 27px 10px 27px;
+  box-sizing: border-box;
+  border-top: 2px solid transparent;
+  color: #425362;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  margin: 0;
+  font-family: "Montserrat";
+  transition: all 0.4s ease;
+}
+.header__menu-link:hover {
+  text-shadow: 0 0 0.8px #921012, 0 0 0.8px #921012;
+  border-color: #921012;
+  color: #921012;
 }/*# sourceMappingURL=styles.css.map */

@@ -1,12 +1,14 @@
 .header {
-  width: 100%;
-  border-bottom: 1px solid #1e1e1e2c;
-  height: 78px;
-  display: flex;
-  align-items: center;
 
+  &__top {
+    width: 100%;
+    border-bottom: 1px solid #1e1e1e2c;
+    height: 78px;
+    display: flex;
+    align-items: center;
+  }
 
-  &__content {
+  &__top-content {
     width: 1220px;
     margin: 0 auto;
     display: flex;
@@ -15,18 +17,18 @@
 
   &__link {
     @include transition;
-  }
 
-  &__link:hover {
-    opacity: .6;
-  }
+    &:hover {
+      opacity: .6;
+    }
 
-  &__link_number {
-    @include font(400, 16px, 20px);
-    display: block;
-    margin-left: 44px;
-    font-family: 'Montserrat';
-    color: $gray-color;
+    &_number {
+      @include font(400, 16px, 20px);
+      display: block;
+      margin-left: 44px;
+      font-family: 'Montserrat';
+      color: $gray-color;
+    }
   }
 
   &__input-container {
@@ -65,10 +67,10 @@
     right: 0;
     top: 0;
     @include transition;
-  }
 
-  &__search:hover {
-    transform: scale(1.2);
+    &:hover {
+      transform: scale(1.2);
+    }
   }
 
   &__btn {
@@ -77,5 +79,34 @@
     line-height: 17px;
     width: 163px;
     height: 38px;
+  }
+
+  &__bottom {
+    height: 76px;
+    display: flex;
+    justify-content: center;
+  }
+
+  &__menu-list {
+    display: flex;
+    justify-content: space-between;
+    gap: 60px;
+  }
+
+  &__menu-link {
+    display: block;
+    padding: 27px 10px 27px;
+    box-sizing: border-box;
+    border-top: 2px solid transparent;
+    color: $gray-color;
+    @include font(400, 14px, 17px);
+    font-family: 'Montserrat';
+    @include transition;
+
+    &:hover {
+      text-shadow: 0 0 .8px $red-color, 0 0 .8px $red-color;
+      border-color: $red-color;
+      color: $red-color;
+    }
   }
 }
