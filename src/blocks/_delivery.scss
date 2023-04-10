@@ -1,0 +1,14 @@
+.delivery {
+  margin-top: 150px;
+  margin-bottom: 250px;
+
+  &__content {
+    width: $large-content-width;
+    margin: 0 auto;
+  }
+
+  &__title {
+    @include font(700, 40px, 50px);
+    color: $grey-color;
+  }
+}

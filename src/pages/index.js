@@ -12,3 +12,17 @@ const heroSwiper = new Swiper('.hero__swiper', {
   },
   speed: 1000,
 });
+
+const recommendSwiper = new Swiper('.recommend__swiper', {
+  grabCursor: true,
+  slidesPerView: 4,
+  spaceBetween: 21,
+  pagination: {
+    el: ".recommend__swiper-pagination",
+    clickable: true,
+  },
+  navigation: {
+    nextEl: ".recommend__swiper-btn_next",
+    prevEl: ".recommend__swiper-btn_back",
+  },
+});

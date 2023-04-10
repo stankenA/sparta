@@ -1,0 +1,63 @@
+.recommend {
+
+  &__content {
+    width: $large-content-width;
+    margin: 0 auto;
+    position: relative;
+  }
+
+  &__swiper-wrapper {
+    margin-bottom: 57px;
+  }
+
+  &__title {
+    @include font(700, 32px, 40px);
+    margin-bottom: 46px;
+    text-align: center;
+    color: $grey-color;
+  }
+
+  &__swiper-btn {
+    display: block;
+    position: absolute;
+    top: 50%;
+    transform: translateY(50%);
+    width: 24px;
+    height: 24px;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    cursor: pointer;
+
+    &_back {
+      left: -50px;
+      background-image: url(../images/red-arrow-back.svg);
+    }
+
+    &_next {
+      right: -50px;
+      background-image: url(../images/red-arrow-next.svg);
+    }
+  }
+
+  &__swiper-pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 17px;
+
+    .swiper-pagination-bullet {
+      width: 11px;
+      height: 11px;
+      background-color: $sand-color;
+      opacity: 1;
+      @include transition;
+    }
+
+    .swiper-pagination-bullet-active {
+      width: 17px;
+      height: 17px;
+      background-color: $red-color;
+    }
+  }
+}
