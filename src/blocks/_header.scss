@@ -27,7 +27,7 @@
       display: block;
       margin-left: 44px;
       font-family: 'Montserrat';
-      color: $gray-color;
+      color: $grey-color;
     }
   }
 
@@ -40,8 +40,8 @@
 
   &__input {
     @include font(400, 14px, 17px);
-    background-color: #1e1e1e05;
-    color: $gray-color;
+    background-color: #1e1e1e0c;
+    color: $grey-color;
     border: 1px solid transparent;
     box-sizing: border-box;
     border-radius: 8px;
@@ -98,7 +98,7 @@
     padding: 27px 10px 27px;
     box-sizing: border-box;
     border-top: 2px solid transparent;
-    color: $gray-color;
+    color: $grey-color;
     @include font(400, 14px, 17px);
     font-family: 'Montserrat';
     @include transition;

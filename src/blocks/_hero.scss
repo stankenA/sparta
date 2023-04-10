@@ -1,0 +1,97 @@
+.hero {
+  width: 100%;
+  height: 542px;
+  position: relative;
+
+  &__content {
+    width: $content-width;
+    padding-top: 66px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+  }
+
+  &__title {
+    margin: 0;
+    color: #fff;
+    max-width: 675px;
+    @include font(900, 74px, 73px);
+  }
+
+  &__txt-block {
+    position: relative;
+    z-index: 3;
+    max-width: 495px;
+    margin: 18px 0 38px;
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: 0;
+      bottom: 0;
+      display: block;
+      width: 100%;
+      height: 100%;
+      background: rgba(255, 255, 255, 0.02);
+      backdrop-filter: blur(4.5px);
+      z-index: 2;
+      border-radius: 24px;
+    }
+  }
+
+  &__txt {
+    color: #fff;
+    display: block;
+    @include font(400, 24px, 29px);
+    margin: 0;
+    position: relative;
+    z-index: 3;
+  }
+
+  &__btn {
+    width: 399px;
+    height: 54px;
+  }
+
+  &__swiper {
+    width: 100%;
+    height: 100%;
+  }
+
+  &__swiper-wrapper {
+    width: 100%;
+    height: 100%;
+    position: relative;
+  }
+
+  &__swiper-slide {
+    width: 100%;
+    height: 100%;
+
+    &_first {
+      background: url(../images/hero-background.jpg) no-repeat center / cover;
+    }
+  }
+
+  &__pagination {
+    display: block;
+    position: absolute;
+    z-index: 3;
+    left: 50%;
+    bottom: 29px;
+    transform: translateX(50%);
+
+    .swiper-pagination-bullet {
+      width: 11px;
+      height: 11px;
+      background-color: #fff;
+      opacity: 1;
+    }
+
+    .swiper-pagination-bullet-active {
+      background-color: $red-color;
+    }
+  }
+}
