@@ -1,0 +1,38 @@
+.news {
+  margin-bottom: 57px;
+
+  &__content {
+    position: relative;
+
+    &_main {
+      width: $large-content-width;
+      margin: 0 auto;
+    }
+  }
+
+  &__swiper {
+    margin-bottom: 57px;
+  }
+
+  &__pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    height: 17px;
+
+    .swiper-pagination-bullet {
+      background-color: $sand-color;
+      width: 11px;
+      height: 11px;
+      opacity: 1;
+      @include transition;
+    }
+
+    .swiper-pagination-bullet-active {
+      width: 17px;
+      height: 17px;
+      background-color: $red-color;
+    }
+  }
+}

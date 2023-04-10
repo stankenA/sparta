@@ -26,3 +26,17 @@ const recommendSwiper = new Swiper('.recommend__swiper', {
     prevEl: ".recommend__swiper-btn_back",
   },
 });
+
+const newsSwiper = new Swiper('.news__swiper', {
+  grabCursor: true,
+  slidesPerView: 4,
+  spaceBetween: 20,
+  pagination: {
+    el: ".news__pagination",
+    clickable: true,
+  },
+  navigation: {
+    nextEl: ".news__swiper-btn_next",
+    prevEl: ".news__swiper-btn_back",
+  },
+});

@@ -7,6 +7,11 @@
   font-family: "Gilroy", sans-serif;
 }
 
+.link {
+  text-decoration: none;
+  color: unset;
+}
+
 .button {
   font-weight: 700;
   font-size: 24px;
@@ -26,11 +31,6 @@
 .button:hover {
   background-color: #fff;
   color: #921012;
-}
-
-.link {
-  text-decoration: none;
-  color: unset;
 }
 
 .list {
@@ -112,6 +112,62 @@
   line-height: 52px;
   margin: 0;
   color: #921012;
+}
+
+.article {
+  display: flex;
+  flex-direction: column;
+  width: 286px;
+  height: 527px;
+  background: #FFFFFF;
+  box-shadow: 6px 0 25px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+.article_slide {
+  width: 100%;
+  height: 100%;
+}
+.article__img {
+  border-radius: 10px 10px 0 0;
+  width: 100%;
+  height: 248px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.article__content {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 14px 14px 22px 14px;
+  flex-grow: 1;
+}
+.article__title {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 25px;
+  margin: 0;
+}
+.article__date {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 25px;
+  margin: 0;
+  color: #425362;
+  display: block;
+}
+.article__txt {
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 16px;
+  margin: 0;
+  margin: 17px 0;
+}
+.article__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: auto;
 }
 
 .header {
@@ -452,4 +508,37 @@
 }
 .delivery__companies-img {
   display: block;
+}
+
+.news {
+  margin-bottom: 57px;
+}
+.news__content {
+  position: relative;
+}
+.news__content_main {
+  width: 1206px;
+  margin: 0 auto;
+}
+.news__swiper {
+  margin-bottom: 57px;
+}
+.news__pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  height: 17px;
+}
+.news__pagination .swiper-pagination-bullet {
+  background-color: #D3AF75;
+  width: 11px;
+  height: 11px;
+  opacity: 1;
+  transition: all 0.4s ease;
+}
+.news__pagination .swiper-pagination-bullet-active {
+  width: 17px;
+  height: 17px;
+  background-color: #921012;
 }/*# sourceMappingURL=styles.css.map */
