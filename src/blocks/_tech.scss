@@ -1,0 +1,37 @@
+.tech {
+  &__content {
+    width: $large-content-width;
+    margin: 0 auto 120px;
+  }
+
+  &__title {
+    @include font(700, 48px, 59px);
+    color: $grey-color;
+    max-width: 848px;
+    padding-top: 30px;
+  }
+
+  &__txt {
+    @include font(500, 16px, 29px);
+    margin: 18px 0 29px;
+    max-width: 712px;
+  }
+
+  &__logos {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 94px;
+    column-gap: 34px;
+  }
+
+  &__logo {
+    display: block;
+    height: min-content;
+  }
+
+  &__btn {
+    width: 399px;
+    height: 54px;
+  }
+}
