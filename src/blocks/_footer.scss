@@ -1,0 +1,102 @@
+.footer {
+  background-color: $grey-color;
+  color: #fff;
+  min-height: 322px;
+
+  &__content {
+    height: 237px;
+    padding-top: 31px;
+    width: $large-content-width;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__left {
+    display: flex;
+    width: 440px;
+    height: 100%;
+    border-bottom: 1px solid #fff;
+  }
+
+  &__nav {
+    width: 90px;
+    margin-right: 62px;
+  }
+
+  &__item {}
+
+  &__title {
+    @include font(700, 20px, 25px);
+    margin-bottom: 16px;
+  }
+
+  &__txt {
+    @include font(400, 16px, 19px);
+  }
+
+  &__link {
+    display: block;
+    @include transition;
+    margin-bottom: 6px;
+
+    &:hover {
+      opacity: .6;
+    }
+  }
+
+  &__left-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__contacts {
+    margin-top: 38px;
+  }
+
+  &__logo {
+    width: 214px;
+    height: 214px;
+  }
+
+  &__right {
+    height: 100%;
+    width: 440px;
+    border-bottom: 1px solid #fff;
+  }
+
+  &__input-container {
+    position: relative;
+    margin-top: 57px;
+    height: 54px;
+    width: 100%;
+  }
+
+  &__input {
+    background-color: #fff;
+    box-shadow: 6px 10px 25px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    border: 1px solid transparent;
+    @include transition;
+    @include font(400, 16px, 19px);
+    color: $grey-color;
+    box-sizing: border-box;
+    padding: 17px 22px;
+    width: 68%;
+    height: 100%;
+
+    &:focus-visible {
+      outline: none;
+      border-color: $red-color;
+    }
+  }
+
+  &__btn {
+    position: absolute;
+    right: 0;
+    top: 0;
+    font-size: 16px;
+    width: 35%;
+  }
+}
