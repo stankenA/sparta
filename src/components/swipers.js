@@ -77,4 +77,25 @@ export const newsSwiper = new Swiper('.news__swiper', {
 
 // Product
 
-export const productSwiper = new Swiper('.product__swiper', {});
+export const thumbsSwiper = new Swiper('.product__thumbs', {
+  grabCursor: true,
+  breakpoints: {
+    320: {
+      slidesPerView: 5,
+      spaceBetween: 12,
+    },
+    768: {
+      slidesPerView: 5,
+      spaceBetween: 23,
+    }
+  },
+});
+
+export const productSwiper = new Swiper('.product__swiper', {
+  grabCursor: true,
+  watchSlidesProgress: true,
+  thumbs: {
+    swiper: thumbsSwiper,
+  },
+});
+

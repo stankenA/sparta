@@ -1,0 +1,10 @@
+.txt {
+  @include font(400, 16px, 19px);
+  margin-bottom: 10px;
+
+  @media screen and (max-width: 767px) {
+    font-size: 14px;
+    line-height: 17px;
+    margin-bottom: 6px;
+  }
+}

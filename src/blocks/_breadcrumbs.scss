@@ -3,9 +3,16 @@
   margin-top: 24px;
   margin-bottom: 32px;
   display: flex;
-  gap: 22px;
+  column-gap: 22px;
   align-items: center;
   color: var(--grey-color);
+  flex-wrap: wrap;
+
+  @media screen and (max-width:767px) {
+    column-gap: 2px;
+    font-size: 12px;
+    line-height: 14px;
+  }
 
   &__link {
     @include transition;
