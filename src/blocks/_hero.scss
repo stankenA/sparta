@@ -4,12 +4,20 @@
   position: relative;
   margin-bottom: 20px;
 
+  @media screen and (max-width: 767px) {
+    height: 321px;
+  }
+
   &__content {
-    width: $large-content-width;
+    width: var(--large-content-width);
     padding-top: 66px;
     margin: 0 auto;
     position: relative;
     z-index: 2;
+
+    @media screen and (max-width: 767px) {
+      padding-top: 32px;
+    }
   }
 
   &__title {
@@ -17,6 +25,11 @@
     color: #fff;
     max-width: 675px;
     @include font(900, 74px, 73px);
+
+    @media screen and (max-width: 767px) {
+      font-size: 31px;
+      line-height: 32px;
+    }
   }
 
   &__txt-block {
@@ -24,6 +37,12 @@
     z-index: 3;
     max-width: 495px;
     margin: 18px 0 38px;
+
+    @media screen and (max-width: 767px) {
+      margin-top: 28px;
+      margin-bottom: 33px;
+      max-width: 280px;
+    }
 
     &::after {
       content: '';
@@ -49,10 +68,21 @@
     margin: 0;
     position: relative;
     z-index: 3;
+
+    @media screen and (max-width: 767px) {
+      font-size: 14px;
+      line-height: 17px;
+    }
   }
 
   &__btn {
     width: 399px;
+
+    @media screen and (max-width: 767px) {
+      display: block;
+      width: 80%;
+      margin: 0 auto;
+    }
   }
 
   &__swiper {
@@ -76,12 +106,14 @@
   }
 
   &__pagination {
-    display: block;
+    display: flex;
+    gap: 5px;
     position: absolute;
     z-index: 3;
-    left: 50%;
-    bottom: 29px;
-    transform: translateX(50%);
+    width: unset !important;
+    left: 50% !important;
+    bottom: 16px !important;
+    transform: translateX(-50%);
 
     .swiper-pagination-bullet {
       width: 11px;
@@ -91,7 +123,7 @@
     }
 
     .swiper-pagination-bullet-active {
-      background-color: $red-color;
+      background-color: var(--red-color);
     }
   }
 }

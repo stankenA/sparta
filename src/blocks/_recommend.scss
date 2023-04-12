@@ -1,7 +1,7 @@
 .recommend {
 
   &__content {
-    width: $large-content-width;
+    width: var(--large-content-width);
     margin: 0 auto;
     position: relative;
   }
@@ -14,14 +14,20 @@
     @include font(700, 32px, 40px);
     margin-bottom: 46px;
     text-align: center;
-    color: $grey-color;
+    color: var(--grey-color);
+
+    @media screen and (max-width: 767px) {
+      font-size: 24px;
+      line-height: 30px;
+      margin-bottom: 30px;
+    }
   }
 
   &__swiper-btn {
     display: block;
     position: absolute;
     top: 50%;
-    transform: translateY(50%);
+    transform: translateY(-50%);
     width: 24px;
     height: 24px;
     background-position: center;
@@ -29,14 +35,38 @@
     background-repeat: no-repeat;
     cursor: pointer;
 
+    @media screen and (max-width: 1023px) {
+      top: 504px;
+    }
+
+    @media screen and (max-width: 767px) {
+      top: 479px;
+    }
+
     &_back {
       left: -50px;
       background-image: url(../images/red-arrow-back.svg);
+
+      @media screen and (max-width: 1023px) {
+        left: 200px;
+      }
+
+      @media screen and (max-width: 767px) {
+        left: 5px
+      }
     }
 
     &_next {
       right: -50px;
       background-image: url(../images/red-arrow-next.svg);
+
+      @media screen and (max-width: 1023px) {
+        right: 200px;
+      }
+
+      @media screen and (max-width: 767px) {
+        right: 5px;
+      }
     }
   }
 
@@ -45,11 +75,12 @@
     align-items: center;
     justify-content: center;
     height: 17px;
+    gap: 4px;
 
     .swiper-pagination-bullet {
       width: 11px;
       height: 11px;
-      background-color: $sand-color;
+      background-color: var(--sand-color);
       opacity: 1;
       @include transition;
     }
@@ -57,7 +88,7 @@
     .swiper-pagination-bullet-active {
       width: 17px;
       height: 17px;
-      background-color: $red-color;
+      background-color: var(--red-color);
     }
   }
 }

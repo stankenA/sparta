@@ -34,7 +34,7 @@
 
   &__date {
     @include font(400, 14px, 25px);
-    color: $grey-color;
+    color: var(--grey-color);
     display: block;
   }
 

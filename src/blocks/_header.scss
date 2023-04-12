@@ -1,5 +1,7 @@
 .header {
   background-color: #fff;
+  overflow: hidden;
+  position: relative;
 
   &__top {
     width: 100%;
@@ -14,6 +16,15 @@
     margin: 0 auto;
     display: flex;
     align-items: center;
+
+    @media screen and (max-width: 1439px) {
+      width: 95%;
+    }
+
+    @media screen and (max-width: 767px) {
+      justify-content: space-between;
+      position: relative;
+    }
   }
 
   &__link {
@@ -28,7 +39,19 @@
       display: block;
       margin-left: 44px;
       font-family: 'Montserrat';
-      color: $grey-color;
+      color: var(--grey-color);
+
+      @media screen and (max-width: 1023px) {
+        margin-left: 18px;
+      }
+
+      @media screen and (max-width: 767px) {
+        position: absolute;
+        top: 518px;
+        left: 50%;
+        transform: translateX(-50%);
+        margin-left: 0;
+      }
     }
   }
 
@@ -37,12 +60,29 @@
     height: 38px;
     position: relative;
     margin-left: 207px;
+
+    @media screen and (max-width: 1439px) {
+      margin-left: 120px;
+    }
+
+    @media screen and (max-width: 1023px) {
+      width: 261px;
+      margin-left: 45px;
+    }
+
+    @media screen and (max-width: 767px) {
+      position: absolute;
+      left: 0;
+      top: 98px;
+      width: 100%;
+      margin-left: 0;
+    }
   }
 
   &__input {
     @include font(400, 14px, 17px);
     background-color: #1e1e1e0c;
-    color: $grey-color;
+    color: var(--grey-color);
     border: 1px solid transparent;
     box-sizing: border-box;
     border-radius: 8px;
@@ -54,7 +94,7 @@
   }
 
   &__input:focus-visible {
-    border-color: $red-color;
+    border-color: var(--red-color);
     outline: none;
   }
 
@@ -80,18 +120,45 @@
     line-height: 17px;
     width: 163px;
     height: 38px;
+
+    @media screen and (max-width: 767px) {
+      display: none;
+    }
   }
 
   &__bottom {
     height: 76px;
     display: flex;
     justify-content: center;
+
+    @media screen and (max-width: 767px) {
+      height: 508px;
+      @include transition;
+    }
+
+    &_closed {
+      @media screen and (max-width: 767px) {
+        height: 0;
+      }
+    }
   }
 
   &__menu-list {
     display: flex;
     justify-content: space-between;
     gap: 60px;
+
+    @media screen and (max-width: 1023px) {
+      gap: 20px;
+    }
+
+    @media screen and (max-width: 767px) {
+      flex-direction: column;
+      align-items: center;
+      margin-top: 89px;
+      margin-bottom: 50px;
+    }
+
   }
 
   &__menu-link {
@@ -99,15 +166,37 @@
     padding: 27px 10px 27px;
     box-sizing: border-box;
     border-top: 2px solid transparent;
-    color: $grey-color;
+    color: var(--grey-color);
     @include font(400, 14px, 17px);
     font-family: 'Montserrat';
     @include transition;
 
+    @media screen and (max-width: 767px) {
+      padding-top: 5px;
+      padding-bottom: 5px;
+    }
+
     &:hover {
-      text-shadow: 0 0 .8px $red-color, 0 0 .8px $red-color;
-      border-color: $red-color;
-      color: $red-color;
+      text-shadow: 0 0 .8px var(--red-color), 0 0 .8px var(--red-color);
+      border-color: var(--red-color);
+      color: var(--red-color);
+    }
+
+  }
+
+  &__menu-btn {
+    display: none;
+    @include transition;
+
+    @media screen and (max-width: 767px) {
+      display: block;
+      width: 26px;
+      height: 18px;
+      background: url(../images/hamburger.svg) no-repeat center / contain;
+    }
+
+    &_opened {
+      opacity: .5;
     }
   }
 }

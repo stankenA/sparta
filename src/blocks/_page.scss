@@ -1,4 +1,15 @@
 .page {
   background-color: #F5F5F5;
   font-family: 'Gilroy', sans-serif;
+
+  --red-color: #921012;
+  --grey-color: #425362;
+  --sand-color: #D3AF75;
+
+  --large-content-width: 1206px;
+  --content-width: 1054px;
+
+  @media screen and (max-width:1439px) {
+    --large-content-width: 90%;
+  }
 }

@@ -1,7 +1,7 @@
 .button {
   @include font(700, 24px, 30px);
-  border: 1px solid $red-color;
-  background-color: $red-color;
+  border: 1px solid var(--red-color);
+  background-color: var(--red-color);
   border-radius: 8px;
   box-sizing: border-box;
   color: #fff;
@@ -11,8 +11,14 @@
   cursor: pointer;
   @include transition;
 
+  @media screen and (max-width: 767px) {
+    height: 44px;
+    font-size: 16px;
+    line-height: 20px;
+  }
+
   &:hover {
     background-color: #fff;
-    color: $red-color;
+    color: var(--red-color);
   }
 }

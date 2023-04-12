@@ -1,11 +1,22 @@
 .delivery {
   margin-top: 150px;
   margin-bottom: 205px;
+  position: relative;
+
+  @media screen and (max-width: 767px) {
+    margin-top: 59px;
+    margin-bottom: 79px;
+  }
 
   &__content {
-    width: $large-content-width;
+    width: var(--large-content-width);
     margin: 0 auto;
     position: relative;
+
+    @media screen and (max-width: 1023px) {
+      display: flex;
+      flex-direction: column;
+    }
   }
 
   &__txt-block {
@@ -14,16 +25,38 @@
     justify-content: center;
     width: 417px;
     margin: 0 auto;
+    order: 3;
+
+    @media screen and (max-width: 1023px) {
+      width: var(--large-content-width);
+    }
   }
 
   &__title {
     @include font(700, 40px, 50px);
-    color: $grey-color;
+    color: var(--grey-color);
+    text-align: center;
+    order: 1;
+
+    @media screen and (max-width: 1023px) {
+      margin-bottom: 19px;
+    }
+
+    @media screen and (max-width: 767px) {
+      font-size: 24px;
+      line-height: 30px;
+    }
   }
 
   &__txt {
     @include font(500, 16px, 29px);
     margin: 40px 0;
+
+    @media screen and (max-width: 767px) {
+      font-size: 14px;
+      line-height: 21px;
+      margin-bottom: 20px;
+    }
   }
 
   &__btn {
@@ -38,9 +71,60 @@
     position: absolute;
     right: 0;
     top: 0;
+
+    @media screen and (max-width: 1023px) {
+      position: relative;
+      height: unset;
+      width: 250px;
+      order: 2;
+      align-self: flex-end;
+    }
+
+    @media screen and (max-width: 767px) {
+      width: 124px;
+      margin-right: 6%;
+    }
   }
 
   &__companies-img {
     display: block;
+
+    @media screen and (max-width: 1439px) {
+      width: 80%;
+    }
+
+    @media screen and (max-width: 767px) {
+      width: 100%;
+    }
+  }
+
+  &__bg {
+    display: block;
+    position: absolute;
+    top: -27%;
+    left: -42%;
+    width: 829px;
+    height: 823px;
+    background: url(../images/car.png) no-repeat center / contain;
+    z-index: -1;
+
+    @media screen and (max-width: 1439px) {
+      top: -36%;
+      left: -45%;
+      width: 654px;
+      height: 702px;
+    }
+
+    @media screen and (max-width: 1023px) {
+      top: 42px;
+      left: -3%;
+      width: 379px;
+      height: 450px;
+    }
+
+    @media screen and (max-width: 767px) {
+      left: -229px;
+      top: -50px;
+    }
   }
 }

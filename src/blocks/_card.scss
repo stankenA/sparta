@@ -9,7 +9,7 @@
   @include transition;
 
   &:hover {
-    border-color: $red-color;
+    border-color: var(--red-color);
   }
 
   &__link {
@@ -65,6 +65,6 @@
   &__price-new {
     display: block;
     @include font(500, 43px, 52px);
-    color: $red-color;
+    color: var(--red-color);
   }
 }

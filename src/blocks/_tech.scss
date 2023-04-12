@@ -1,20 +1,39 @@
 .tech {
+  position: relative;
+  overflow: hidden;
+
   &__content {
-    width: $large-content-width;
+    width: var(--large-content-width);
     margin: 0 auto 120px;
+    position: relative;
+
+    @media screen and (max-width: 767px) {
+      margin-bottom: 65px;
+    }
   }
 
   &__title {
     @include font(700, 48px, 59px);
-    color: $grey-color;
+    color: var(--grey-color);
     max-width: 848px;
     padding-top: 30px;
+
+    @media screen and (max-width: 767px) {
+      max-width: 100%;
+      font-size: 20px;
+      line-height: 25px;
+    }
   }
 
   &__txt {
     @include font(500, 16px, 29px);
     margin: 18px 0 29px;
     max-width: 712px;
+
+    @media screen and (max-width: 767px) {
+      font-size: 14px;
+      line-height: 21px;
+    }
   }
 
   &__logos {
@@ -23,14 +42,80 @@
     flex-wrap: wrap;
     margin-bottom: 94px;
     column-gap: 34px;
+
+    @media screen and (max-width: 1023px) {
+      justify-content: center;
+    }
+
+    @media screen and (max-width: 1023px) {
+      margin-bottom: 16px;
+    }
+
+    @media screen and (max-width: 767px) {
+      margin-bottom: 25px;
+    }
   }
 
   &__logo {
     display: block;
     height: min-content;
+    object-fit: contain;
+
+    @media screen and (max-width: 767px) {
+      max-width: 29%;
+    }
   }
 
   &__btn {
     width: 399px;
+
+    @media screen and (max-width: 1023px) {
+      width: 100%;
+    }
+  }
+
+  &__bg {
+    display: block;
+    position: absolute;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 1160px;
+    height: 1160px;
+    z-index: -1;
+
+    @media screen and (max-width: 1439px) {
+      width: 800px;
+      height: 800px;
+    }
+
+    &_first {
+      top: -162%;
+      left: -67%;
+      background-image: url(../images/big-red-square.png);
+
+      @media screen and (max-width: 1439px) {
+        top: -80%;
+        left: -73%;
+      }
+
+      @media screen and (max-width: 1023px) {
+        display: none;
+      }
+    }
+
+    &_second {
+      top: -88%;
+      right: -74%;
+      background-image: url(../images/big-red-square-with-line.png);
+
+      @media screen and (max-width: 1439px) {
+        right: -54%;
+      }
+
+      @media screen and (max-width: 1023px) {
+        display: none;
+      }
+    }
   }
 }
