@@ -1,14 +1,6 @@
 import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.esm.browser.min.js';
 
-const menuBtn = document.querySelector('.header__menu-btn');
-const menuBottom = document.querySelector('.header__bottom');
-
-menuBtn.addEventListener('click', () => {
-  menuBtn.classList.toggle('header__menu-btn_opened');
-  menuBottom.classList.toggle('header__bottom_closed');
-});
-
-const heroSwiper = new Swiper('.hero__swiper', {
+export const heroSwiper = new Swiper('.hero__swiper', {
   grabCursor: true,
   loop: true,
   pagination: {
@@ -21,7 +13,7 @@ const heroSwiper = new Swiper('.hero__swiper', {
   speed: 1000,
 });
 
-const recommendSwiper = new Swiper('.recommend__swiper', {
+export const recommendSwiper = new Swiper('.recommend__swiper', {
   breakpoints: {
     320: {
       slidesPerView: 1,
@@ -52,7 +44,7 @@ const recommendSwiper = new Swiper('.recommend__swiper', {
   },
 });
 
-const newsSwiper = new Swiper('.news__swiper', {
+export const newsSwiper = new Swiper('.news__swiper', {
   breakpoints: {
     320: {
       slidesPerView: 1,
@@ -82,3 +74,7 @@ const newsSwiper = new Swiper('.news__swiper', {
     prevEl: ".news__swiper-btn_back",
   },
 });
+
+// Product
+
+export const productSwiper = new Swiper('.product__swiper', {});

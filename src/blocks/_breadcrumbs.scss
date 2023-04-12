@@ -1,0 +1,21 @@
+.breadcrumbs {
+  @include font(300, 14px, 17px);
+  margin-top: 24px;
+  margin-bottom: 32px;
+  display: flex;
+  gap: 22px;
+  align-items: center;
+  color: var(--grey-color);
+
+  &__link {
+    @include transition;
+
+    &_active {
+      text-decoration: underline;
+    }
+
+    &:hover {
+      opacity: .6;
+    }
+  }
+}
