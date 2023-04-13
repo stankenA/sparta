@@ -15,6 +15,8 @@
   opacity: 0;
   visibility: hidden;
 
+
+
   &_opened {
     opacity: 1;
     visibility: visible;
@@ -27,6 +29,15 @@
     border-radius: 10px;
     overflow: hidden;
     position: relative;
+
+    @media screen and (max-width: 1439px) {
+      width: 950px;
+    }
+
+    @media screen and (max-width: 1023px) {
+      width: 90%;
+      height: unset;
+    }
   }
 
   &__content {
@@ -34,6 +45,10 @@
     z-index: 5;
     width: 840px;
     margin: 0 auto;
+
+    @media screen and (max-width: 1023px) {
+      width: 90%;
+    }
   }
 
   &__title {
@@ -41,12 +56,29 @@
     color: var(--grey-color);
     margin-top: 46px;
     margin-bottom: 65px;
+
+    @media screen and (max-width: 1023px) {
+      font-size: 41px;
+      margin-bottom: 25px;
+    }
+
+    @media screen and (max-width: 767px) {
+      margin-top: 38px;
+      font-size: 16px;
+      line-height: 20px;
+    }
   }
 
   &__main {
     width: 100%;
     display: flex;
     justify-content: space-between;
+
+    @media screen and (max-width: 1023px) {
+      flex-direction: column-reverse;
+      justify-content: center;
+      margin-bottom: 40px;
+    }
   }
 
   &__fieldset {
@@ -54,18 +86,30 @@
     margin: 0;
     width: 337px;
     border: none;
+
+    @media screen and (max-width: 1023px) {
+      width: 100%;
+    }
   }
 
   &__row {
     display: flex;
     flex-direction: column;
     margin-bottom: 28px;
+
+    @media screen and (max-width: 1023px) {
+      margin-bottom: 12px;
+    }
   }
 
   &__label {
     @include font(500, 16px, 19px);
     margin-left: 25px;
     margin-bottom: 10px;
+
+    @media screen and (max-width: 767px) {
+      margin-left: 12px;
+    }
   }
 
   &__input {
@@ -80,6 +124,12 @@
     padding-right: 25px;
     @include transition;
 
+    @media screen and (max-width: 767px) {
+      height: 44px;
+      padding-left: 12px;
+      padding-right: 12px;
+    }
+
     &:focus-visible {
       border-color: var(--red-color);
       outline: none;
@@ -88,6 +138,10 @@
 
   &__submit {
     width: 100%;
+
+    @media screen and (max-width: 767px) {
+      margin-top: 15px;
+    }
   }
 
   &__line {
@@ -95,21 +149,48 @@
     width: 1px;
     height: 408px;
     border-left: 1px solid var(--grey-color);
+
+    @media screen and (max-width: 1023px) {
+      width: 100%;
+      height: 1px;
+      border-left: none;
+      border-bottom: 1px solid var(--grey-color);
+      margin-top: 25px;
+      margin-bottom: 25px;
+    }
   }
 
   &__info {
     width: 335px;
+
+    @media screen and (max-width: 767px) {
+      width: 100%;
+    }
   }
 
   &__subtitle {
     @include font(500, 32px, 39px);
     color: var(--grey-color);
     margin-bottom: 37px;
+
+    @media screen and (max-width: 1023px) {
+      margin-bottom: 5px;
+      font-size: 30px;
+    }
+
+    @media screen and (max-width: 767px) {
+      display: none;
+    }
   }
 
   &__txt {
     @include font(400, 16px, 19px);
     color: var(--grey-color);
+
+    @media screen and (max-width: 767px) {
+      font-size: 14px;
+      line-height: 17px;
+    }
   }
 
   &__bg {
@@ -121,6 +202,20 @@
     right: -646px;
     z-index: 3;
     background: url(../images/big-red-square-with-line.png) no-repeat center / contain;
+
+    @media screen and (max-width: 1023px) {
+      width: 450px;
+      height: 450px;
+      top: -254px;
+      right: -236px;
+    }
+
+    @media screen and (max-width: 767px) {
+      width: 300px;
+      height: 300px;
+      top: -151px;
+      right: -183px;
+    }
   }
 
   &__close {
@@ -139,6 +234,18 @@
 
     &:hover {
       opacity: .6;
+    }
+
+    @media screen and (max-width: 1023px) {
+      top: 17px;
+      right: 17px;
+    }
+
+    @media screen and (max-width: 767px) {
+      width: 14px;
+      height: 14px;
+      top: 12px;
+      right: 12px;
     }
   }
 }
