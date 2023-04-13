@@ -1857,4 +1857,114 @@
   width: 100%;
   height: 100%;
   border: none;
+}
+
+.not-found {
+  position: relative;
+  overflow: hidden;
+}
+.not-found__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 720px;
+  width: 100%;
+  position: relative;
+}
+@media screen and (max-width: 767px) {
+  .not-found__content {
+    height: 570px;
+  }
+}
+.not-found__404 {
+  font-weight: 900;
+  font-size: 262px;
+  line-height: 260px;
+  margin: 0;
+}
+@media screen and (max-width: 767px) {
+  .not-found__404 {
+    font-size: 162px;
+  }
+}
+.not-found__helmet {
+  display: inline-block;
+  width: 210px;
+  height: 203px;
+  background: url(../images/helmet.svg) no-repeat center/contain;
+  margin-left: -25px;
+  margin-right: -25px;
+}
+@media screen and (max-width: 767px) {
+  .not-found__helmet {
+    width: 117px;
+    height: 118px;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+.not-found__txt {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  margin: 0;
+  margin-bottom: 40px;
+}
+@media screen and (max-width: 767px) {
+  .not-found__txt {
+    max-width: 235px;
+    text-align: center;
+  }
+}
+.not-found__link {
+  width: 163px;
+  height: 38px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 17px;
+  margin: 0;
+}
+.not-found__bg {
+  display: block;
+  position: absolute;
+  background: url(../images/big-red-square-with-line.png) no-repeat center/contain;
+  width: 892px;
+  height: 912px;
+  z-index: -1;
+}
+.not-found__bg_first {
+  transform: scale(-1, 1) rotate(90deg);
+  top: -72px;
+  left: -545px;
+}
+@media screen and (max-width: 1439px) {
+  .not-found__bg_first {
+    top: -72px;
+    left: -680px;
+  }
+}
+@media screen and (max-width: 1023px) {
+  .not-found__bg_first {
+    display: none;
+  }
+}
+.not-found__bg_second {
+  transform: scale(-1, 1) rotate(-90deg);
+  top: -160px;
+  right: -542px;
+}
+@media screen and (max-width: 1439px) {
+  .not-found__bg_second {
+    top: -160px;
+    right: -695px;
+  }
+}
+@media screen and (max-width: 1023px) {
+  .not-found__bg_second {
+    display: none;
+  }
 }/*# sourceMappingURL=styles.css.map */
