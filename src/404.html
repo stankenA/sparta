@@ -21,7 +21,7 @@
           <input type="text" class="header__input" placeholder="Поиск">
           <span class="header__search"></span>
         </div>
-        <button type="button" class="header__btn button">заказать звонок</button>
+        <button type="button" class="header__btn button button_popup">заказать звонок</button>
         <span class="header__menu-btn"></span>
       </div>
     </div>
@@ -164,6 +164,42 @@
       </div>
     </div>
   </footer>
+  <div class="popup">
+    <div class="popup__container">
+      <div class="popup__content">
+        <h3 class="popup__title">Закажите обратный звонок</h3>
+        <div class="popup__main">
+          <form class="popup__form">
+            <fieldset class="popup__fieldset">
+              <div class="popup__row">
+                <label for="name" class="popup__label">ФИО</label>
+                <input name="name" id="name" type="text" class="popup__input" placeholder="Иванович Иван Иванов">
+              </div>
+              <div class="popup__row">
+                <label for="phone" class="popup__label">Телефон</label>
+                <input name="phone" id="phone" type="tel" class="popup__input" placeholder="+7 (999) 999-99-99">
+              </div>
+              <div class="popup__row">
+                <label for="mail" class="popup__label">Почта</label>
+                <input name="mail" id="name" type="email" class="popup__input" placeholder="pochta@mail.ru">
+              </div>
+            </fieldset>
+            <button type="submit" class="popup__submit button">отправить</button>
+          </form>
+          <span class="popup__line"></span>
+          <div class="popup__info">
+            <h4 class="popup__subtitle">Заголовок</h4>
+            <p class="popup__txt">
+              Ищете оборудование или деталь для самостоятельной замены? Оставьте ваши контакты, и мы расскажем, что есть
+              в наличии, или подберем товар под заказ.
+            </p>
+          </div>
+        </div>
+      </div>
+      <span class="popup__bg"></span>
+      <button type="button" class="popup__close"></button>
+    </div>
+  </div>
   <script src="./pages/pageWithRecommend.js" type="module" defer></script>
 </body>
 

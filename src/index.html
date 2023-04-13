@@ -21,7 +21,7 @@
           <input type="text" class="header__input" placeholder="Поиск">
           <span class="header__search"></span>
         </div>
-        <button type="button" class="header__btn button">заказать звонок</button>
+        <button type="button" class="header__btn button button_popup">заказать звонок</button>
         <span class="header__menu-btn"></span>
       </div>
     </div>
@@ -68,7 +68,7 @@
                   Таможенное оформление
                 </p>
               </div>
-              <button class="hero__btn button">ознакомиться</button>
+              <a href="#" class="hero__btn button link">ознакомиться</a>
             </div>
           </li>
           <li class="hero__swiper-slide hero__swiper-slide_first swiper-slide">
@@ -82,7 +82,7 @@
                   Таможенное оформление
                 </p>
               </div>
-              <button class="hero__btn button">ознакомиться</button>
+              <a href="#" class="hero__btn button link">ознакомиться</a>
             </div>
           </li>
           <li class="hero__swiper-slide hero__swiper-slide_first swiper-slide">
@@ -96,7 +96,7 @@
                   Таможенное оформление
                 </p>
               </div>
-              <button class="hero__btn button">ознакомиться</button>
+              <a href="#" class="hero__btn button link">ознакомиться</a>
             </div>
           </li>
         </ul>
@@ -127,7 +127,7 @@
           <img src="./images/logos/fundex-equipment.png" alt="Логотип компании" class="tech__logo">
           <img src="./images/logos/doosan.png" alt="Логотип компании" class="tech__logo">
         </div>
-        <button class="tech__btn button">оставить заявку</button>
+        <button class="tech__btn button button_popup">оставить заявку</button>
         <span class="tech__bg tech__bg_first"></span>
         <span class="tech__bg tech__bg_second"></span>
       </div>
@@ -261,7 +261,7 @@
             также документ, подтверждающий факт и условия покупки
             указанного товара.
           </p>
-          <button class="delivery__btn button">подробнее</button>
+          <a href="#" class="delivery__btn button link">подробнее</a>
         </div>
         <div class="delivery__companies">
           <img src="./images/logos/delovie-linii.png" alt="Логотип компании" class="delivery__companies-img">
@@ -466,6 +466,42 @@
       </div>
     </div>
   </footer>
+  <div class="popup">
+    <div class="popup__container">
+      <div class="popup__content">
+        <h3 class="popup__title">Закажите обратный звонок</h3>
+        <div class="popup__main">
+          <form class="popup__form">
+            <fieldset class="popup__fieldset">
+              <div class="popup__row">
+                <label for="name" class="popup__label">ФИО</label>
+                <input name="name" id="name" type="text" class="popup__input" placeholder="Иванович Иван Иванов">
+              </div>
+              <div class="popup__row">
+                <label for="phone" class="popup__label">Телефон</label>
+                <input name="phone" id="phone" type="tel" class="popup__input" placeholder="+7 (999) 999-99-99">
+              </div>
+              <div class="popup__row">
+                <label for="mail" class="popup__label">Почта</label>
+                <input name="mail" id="name" type="email" class="popup__input" placeholder="pochta@mail.ru">
+              </div>
+            </fieldset>
+            <button type="submit" class="popup__submit button">отправить</button>
+          </form>
+          <span class="popup__line"></span>
+          <div class="popup__info">
+            <h4 class="popup__subtitle">Заголовок</h4>
+            <p class="popup__txt">
+              Ищете оборудование или деталь для самостоятельной замены? Оставьте ваши контакты, и мы расскажем, что есть
+              в наличии, или подберем товар под заказ.
+            </p>
+          </div>
+        </div>
+      </div>
+      <span class="popup__bg"></span>
+      <button type="button" class="popup__close"></button>
+    </div>
+  </div>
   <script src="./pages/pageMain.js" type="module" defer></script>
 </body>
 
