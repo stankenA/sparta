@@ -1,0 +1,39 @@
+.headline {
+  margin-bottom: 48px;
+
+  &__content {
+    width: var(--large-content-width);
+    margin: 0 auto;
+  }
+
+  &__title {
+    @include font(500, 48px, 58px);
+    margin-top: 47px;
+
+    @media screen and (max-width: 767px) {
+      margin-top: 0;
+      font-size: 24px;
+      line-height: 29px;
+    }
+  }
+
+  &__date {
+    @include font(300, 14px, 17px);
+    display: block;
+    margin-bottom: 29px;
+    color: var(--grey-color);
+  }
+
+  &__img {
+    display: block;
+    width: 100%;
+    height: 517px;
+    border-radius: 10px;
+    margin-bottom: 68px;
+
+    @media screen and (max-width: 767px) {
+      height: calc(100vw * .446);
+      margin-bottom: 16px;
+    }
+  }
+}
