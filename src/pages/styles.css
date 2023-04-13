@@ -692,11 +692,27 @@
   overflow: hidden;
   position: relative;
 }
+@media screen and (max-width: 1439px) {
+  .popup__container {
+    width: 950px;
+  }
+}
+@media screen and (max-width: 1023px) {
+  .popup__container {
+    width: 90%;
+    height: unset;
+  }
+}
 .popup__content {
   position: relative;
   z-index: 5;
   width: 840px;
   margin: 0 auto;
+}
+@media screen and (max-width: 1023px) {
+  .popup__content {
+    width: 90%;
+  }
 }
 .popup__title {
   font-weight: 700;
@@ -707,10 +723,30 @@
   margin-top: 46px;
   margin-bottom: 65px;
 }
+@media screen and (max-width: 1023px) {
+  .popup__title {
+    font-size: 41px;
+    margin-bottom: 25px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .popup__title {
+    margin-top: 38px;
+    font-size: 16px;
+    line-height: 20px;
+  }
+}
 .popup__main {
   width: 100%;
   display: flex;
   justify-content: space-between;
+}
+@media screen and (max-width: 1023px) {
+  .popup__main {
+    flex-direction: column-reverse;
+    justify-content: center;
+    margin-bottom: 40px;
+  }
 }
 .popup__fieldset {
   padding: 0;
@@ -718,10 +754,20 @@
   width: 337px;
   border: none;
 }
+@media screen and (max-width: 1023px) {
+  .popup__fieldset {
+    width: 100%;
+  }
+}
 .popup__row {
   display: flex;
   flex-direction: column;
   margin-bottom: 28px;
+}
+@media screen and (max-width: 1023px) {
+  .popup__row {
+    margin-bottom: 12px;
+  }
 }
 .popup__label {
   font-weight: 500;
@@ -730,6 +776,11 @@
   margin: 0;
   margin-left: 25px;
   margin-bottom: 10px;
+}
+@media screen and (max-width: 767px) {
+  .popup__label {
+    margin-left: 12px;
+  }
 }
 .popup__input {
   width: 100%;
@@ -746,6 +797,13 @@
   padding-right: 25px;
   transition: all 0.4s ease;
 }
+@media screen and (max-width: 767px) {
+  .popup__input {
+    height: 44px;
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+}
 .popup__input:focus-visible {
   border-color: var(--red-color);
   outline: none;
@@ -753,14 +811,34 @@
 .popup__submit {
   width: 100%;
 }
+@media screen and (max-width: 767px) {
+  .popup__submit {
+    margin-top: 15px;
+  }
+}
 .popup__line {
   display: block;
   width: 1px;
   height: 408px;
   border-left: 1px solid var(--grey-color);
 }
+@media screen and (max-width: 1023px) {
+  .popup__line {
+    width: 100%;
+    height: 1px;
+    border-left: none;
+    border-bottom: 1px solid var(--grey-color);
+    margin-top: 25px;
+    margin-bottom: 25px;
+  }
+}
 .popup__info {
   width: 335px;
+}
+@media screen and (max-width: 767px) {
+  .popup__info {
+    width: 100%;
+  }
 }
 .popup__subtitle {
   font-weight: 500;
@@ -770,12 +848,29 @@
   color: var(--grey-color);
   margin-bottom: 37px;
 }
+@media screen and (max-width: 1023px) {
+  .popup__subtitle {
+    margin-bottom: 5px;
+    font-size: 30px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .popup__subtitle {
+    display: none;
+  }
+}
 .popup__txt {
   font-weight: 400;
   font-size: 16px;
   line-height: 19px;
   margin: 0;
   color: var(--grey-color);
+}
+@media screen and (max-width: 767px) {
+  .popup__txt {
+    font-size: 14px;
+    line-height: 17px;
+  }
 }
 .popup__bg {
   display: block;
@@ -786,6 +881,22 @@
   right: -646px;
   z-index: 3;
   background: url(../images/big-red-square-with-line.png) no-repeat center/contain;
+}
+@media screen and (max-width: 1023px) {
+  .popup__bg {
+    width: 450px;
+    height: 450px;
+    top: -254px;
+    right: -236px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .popup__bg {
+    width: 300px;
+    height: 300px;
+    top: -151px;
+    right: -183px;
+  }
 }
 .popup__close {
   border: none;
@@ -803,6 +914,20 @@
 }
 .popup__close:hover {
   opacity: 0.6;
+}
+@media screen and (max-width: 1023px) {
+  .popup__close {
+    top: 17px;
+    right: 17px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .popup__close {
+    width: 14px;
+    height: 14px;
+    top: 12px;
+    right: 12px;
+  }
 }
 
 .hero {
