@@ -1,0 +1,53 @@
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin-top: 62px;
+
+  @media screen and (max-width: 767px) {
+    margin-top: 42px;
+  }
+
+  &__list {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+
+  &__link {
+    @include font(500, 20px, 24px);
+    @include transition;
+
+    &:hover {
+      opacity: .6;
+    }
+
+    &_active {
+      color: var(--red-color);
+    }
+  }
+
+  &__btn {
+    display: block;
+    width: 24px;
+    height: 24px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    @include transition;
+    cursor: pointer;
+
+    &:hover {
+      opacity: .6;
+    }
+
+    &_back {
+      background-image: url(../images/pagination-back.svg);
+    }
+
+    &_next {
+      background-image: url(../images/pagination-next.svg);
+    }
+  }
+}
