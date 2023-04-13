@@ -1,9 +1,12 @@
 .headline {
   margin-bottom: 48px;
+  position: relative;
+  overflow: hidden;
 
   &__content {
     width: var(--large-content-width);
     margin: 0 auto;
+    position: relative;
   }
 
   &__title {
@@ -34,6 +37,32 @@
     @media screen and (max-width: 767px) {
       height: calc(100vw * .446);
       margin-bottom: 16px;
+    }
+  }
+
+  &__bg {
+    position: absolute;
+    display: block;
+    width: 1147px;
+    height: 1165px;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url(../images/big-red-square.png);
+    z-index: -1;
+
+    @media screen and (max-width: 1023px) {
+      display: none;
+    }
+
+    &_first {
+      top: -243px;
+      left: -1181px;
+    }
+
+    &_second {
+      right: -1175px;
+      top: 216px;
     }
   }
 }
