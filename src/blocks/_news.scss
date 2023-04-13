@@ -1,13 +1,11 @@
 .news {
-  margin-bottom: 57px;
+  position: relative;
+  overflow: hidden;
 
   &__content {
     position: relative;
-
-    &_main {
-      width: var(--large-content-width);
-      margin: 0 auto;
-    }
+    width: var(--large-content-width);
+    margin: 0 auto 57px;
   }
 
   &__swiper {
@@ -86,6 +84,35 @@
       width: 17px;
       height: 17px;
       background-color: var(--red-color);
+    }
+  }
+
+  &__gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+
+    @media screen and (max-width: 1023px) {
+      justify-content: center;
+    }
+  }
+
+  &__bg {
+    display: block;
+    width: 1147px;
+    height: 1165px;
+    position: absolute;
+    background: url(../images/big-red-square.png) no-repeat center / contain;
+    z-index: -1;
+
+    &_first {
+      top: -314px;
+      left: -1121px;
+    }
+
+    &_second {
+      top: 187px;
+      right: -1190px;
     }
   }
 }
