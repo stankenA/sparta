@@ -35,3 +35,5 @@
 ## Ссылки
 
 **Демо**: https://stankena.github.io/sparta
+
+**Задеплоенная версия:** https://sparta-ltd.ru
